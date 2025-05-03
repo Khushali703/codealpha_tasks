@@ -1,0 +1,82 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #2c3e50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #ecf0f1;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  text-shadow: #97e9fb 0px 0px 1px, #ffeed3 0px 0px 2px, #b3faff 0px 0px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #f39c12;
+}
+
+/* Links Container */
+.links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Individual Link Styles */
+.links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Hover Effect for Links */
+.links li a:hover {
+  background-color: #97e9fb;
+  color: #2c3e50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Link Style */
+.active {
+  border-bottom: 3px solid #f39c12;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .links li a {
+    padding: 12px 0;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #f4f4f4;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.link:hover {
+  background-color: #e2e2e2;
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #4a90e2;
+}

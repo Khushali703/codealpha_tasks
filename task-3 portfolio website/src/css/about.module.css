@@ -1,0 +1,97 @@
+.aboutContainer {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #ffffff, #f2f6fc);
+  color: #2c3e50;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  line-height: 1.9;
+  font-size: 1.15rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.aboutContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.aboutContainer span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 2rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+.aboutContainer span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.aboutContainer span:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.aboutContainer span:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+.aboutContainer span::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 1.1rem;
+  top: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

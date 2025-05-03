@@ -1,0 +1,135 @@
+/* Global 3D Perspective */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f3f0f7, #d0c0f7);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  perspective: 1500px;
+  overflow: hidden;
+}
+
+/* Container with Glass + Neumorphism + 3D */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px 30px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 10px 10px 30px rgba(137, 82, 193, 0.3),
+    -10px -10px 30px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 6px rgba(137, 82, 193, 0.1);
+  width: 370px;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.container:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+}
+
+/* Display */
+.display {
+  background: rgba(255, 255, 255, 0.3);
+  color: #3d1d5b;
+  font-size: 2.9em;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: right;
+  min-height: 70px;
+  box-shadow: inset 5px 5px 12px rgba(255, 255, 255, 0.5),
+    inset -5px -5px 15px rgba(137, 82, 193, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  gap: 18px;
+  justify-content: center;
+}
+
+/* All Buttons */
+button {
+  height: 70px;
+  width: 75px;
+  font-size: 20px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #d5c1f1, #f0e8fc);
+  color: #3d1d5b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 8px 8px 20px rgba(137, 82, 193, 0.2),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(137, 82, 193, 0.3);
+  z-index: -1;
+  filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #c6acee, #eee2fc);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 10px 10px 25px rgba(137, 82, 193, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.96);
+  box-shadow: inset 4px 4px 10px rgba(137, 82, 193, 0.2);
+}
+
+/* Action Buttons */
+.action {
+  background: linear-gradient(145deg, #b657d6, #e8bbfc);
+  color: white;
+}
+
+.action:hover {
+  background: linear-gradient(145deg, #a043c4, #d4a2f4);
+}
+
+/* Operator Buttons */
+.operator {
+  background: linear-gradient(145deg, #9370db, #ceb9fc);
+  color: white;
+}
+
+.operator:hover {
+  background: linear-gradient(145deg, #7b5fd1, #bca3f0);
+}
+
+/* Equals Button */
+.equal {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  grid-column: span 2;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.5),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #7b1fa2, #3700b3);
+  box-shadow: 0 14px 28px rgba(101, 31, 255, 0.6);
+  transform: translateY(-4px) scale(1.03);
+}
